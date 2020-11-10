@@ -15,8 +15,10 @@ namespace AddressBookLinq
             //addressBookOperations.EditContactUsingFirstName();
             //addressBookOperations.EditContactUsingLastName();
             //addressBookOperations.DeleteContactUsingName();            
-            addressBookOperations.RetrieveByCity();
-            addressBookOperations.RetrieveByState();
+            //addressBookOperations.RetrieveByCity();
+            //addressBookOperations.RetrieveByState();
+            addressBookOperations.GetCountByCity();
+            addressBookOperations.GetCountByState();
         }
     }
 }
