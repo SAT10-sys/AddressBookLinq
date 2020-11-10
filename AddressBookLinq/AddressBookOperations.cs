@@ -156,5 +156,13 @@ namespace AddressBookLinq
                 Console.WriteLine("\n");
             }
         }
+        //get count of contacts by type of address book
+        public void GetCountByType()
+        {
+            var count = addressBook.AsEnumerable().GroupBy(x => x.Field<string>("BookType")).Select(x => new { type = x.Key, number = x.Count() });
+            Console.WriteLine("\nAddress Book Type\t\tCount");
+            foreach(var row in count)
+                Console.WriteLine(row.type.PadRight(20)+row.number);
+        }
     }
 }

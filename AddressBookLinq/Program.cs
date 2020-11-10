@@ -20,6 +20,7 @@ namespace AddressBookLinq
             //addressBookOperations.GetCountByCity();
             //addressBookOperations.GetCountByState();
             //addressBookOperations.ArrangeAlphabeticallyForAGivenCity();
+            addressBookOperations.GetCountByType();
         }
     }
 }
