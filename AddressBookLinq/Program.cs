@@ -7,6 +7,8 @@ namespace AddressBookLinq
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Address Book Problem with Linq");
+            AddressBookOperations addressBookOperations = new AddressBookOperations();
+            addressBookOperations.AddColumns();
         }
     }
 }
