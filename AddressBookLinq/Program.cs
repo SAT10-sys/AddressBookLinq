@@ -11,7 +11,7 @@ namespace AddressBookLinq
             addressBookOperations.AddColumns();
             addressBookOperations.InsertContacts();
             addressBookOperations.Display();
-            Console.WriteLine("\n");
+            //Console.WriteLine("\n");
             //addressBookOperations.EditContactUsingFirstName();
             //addressBookOperations.EditContactUsingLastName();
             //addressBookOperations.DeleteContactUsingName();            
@@ -19,7 +19,7 @@ namespace AddressBookLinq
             //addressBookOperations.RetrieveByState();
             //addressBookOperations.GetCountByCity();
             //addressBookOperations.GetCountByState();
-            addressBookOperations.ArrangeAlphabeticallyForAGivenCity();
+            //addressBookOperations.ArrangeAlphabeticallyForAGivenCity();
         }
     }
 }
