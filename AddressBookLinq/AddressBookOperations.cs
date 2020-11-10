@@ -73,6 +73,20 @@ namespace AddressBookLinq
                 Console.WriteLine("\n Phone Number of {0} edited successfully",lastName);
                 Display();
             }
+            else
+                Console.WriteLine("Invalid entry");
+        }
+        //delete contact using name
+        public void DeleteContactUsingName()
+        {
+            string name = "Steve";
+            var contactToDelete = addressBook.AsEnumerable().Where(x => x.Field<string>("FirstName").Equals(name)).FirstOrDefault();
+            if(contactToDelete!=null)
+            {
+                contactToDelete.Delete();
+                Console.WriteLine("\n Contact with name {0} deleted",name);
+                Display();
+            }
         }
     }
 }

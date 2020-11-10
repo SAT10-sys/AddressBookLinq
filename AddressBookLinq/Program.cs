@@ -11,8 +11,9 @@ namespace AddressBookLinq
             addressBookOperations.AddColumns();
             addressBookOperations.InsertContacts();
             //addressBookOperations.Display(); 
-            addressBookOperations.EditContactUsingFirstName();
-            addressBookOperations.EditContactUsingLastName();
+            //addressBookOperations.EditContactUsingFirstName();
+            //addressBookOperations.EditContactUsingLastName();
+            addressBookOperations.DeleteContactUsingName();            
         }
     }
 }
