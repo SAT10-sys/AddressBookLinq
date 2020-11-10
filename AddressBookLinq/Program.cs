@@ -9,6 +9,8 @@ namespace AddressBookLinq
             Console.WriteLine("Welcome to Address Book Problem with Linq");
             AddressBookOperations addressBookOperations = new AddressBookOperations();
             addressBookOperations.AddColumns();
+            addressBookOperations.InsertContacts();
+            addressBookOperations.Display(); 
         }
     }
 }

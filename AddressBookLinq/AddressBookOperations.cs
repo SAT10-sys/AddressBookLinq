@@ -38,12 +38,12 @@ namespace AddressBookLinq
         public void Display()
         {
             foreach(DataColumn column in addressBook.Columns)
-                Console.Write(column.ToString().PadRight(10));
+                Console.Write(column.ToString().PadRight(20));
             foreach(DataRow row in addressBook.Rows)
             {
                 Console.WriteLine();
                 foreach(DataColumn column in addressBook.Columns)
-                    Console.Write(row[column].ToString().PadRight(10));
+                    Console.Write(row[column].ToString().PadRight(20));
             }
         }
     }
