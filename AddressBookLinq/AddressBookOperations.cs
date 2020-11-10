@@ -88,5 +88,31 @@ namespace AddressBookLinq
                 Display();
             }
         }
+        //retrieve contact by city
+        public void RetrieveByCity()
+        {
+            string city = "New York City";
+            var contactsToFind = addressBook.AsEnumerable().Where(x => x.Field<string>("City") == city);
+            Console.WriteLine("\n Contact(s) belonging to {0} city in the address book",city);          
+            foreach (DataRow row in contactsToFind)
+            {
+                foreach(DataColumn column in addressBook.Columns)
+                    Console.Write(row[column].ToString().PadRight(20));
+                Console.Write("\n");
+            }
+        }
+        //retrieve contact by state
+        public void RetrieveByState()
+        {
+            string state = "West Bengal";
+            var contactsToFind = addressBook.AsEnumerable().Where(x => x.Field<string>("State") == state);
+            Console.WriteLine("\n Contact(s) belonging to {0} state in the address book", state);      
+            foreach (DataRow row in contactsToFind)
+            {
+                foreach (DataColumn column in addressBook.Columns)
+                    Console.Write(row[column].ToString().PadRight(20));
+                Console.Write("\n");
+            }
+        }
     }
 }
