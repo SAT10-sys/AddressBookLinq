@@ -17,8 +17,9 @@ namespace AddressBookLinq
             //addressBookOperations.DeleteContactUsingName();            
             //addressBookOperations.RetrieveByCity();
             //addressBookOperations.RetrieveByState();
-            addressBookOperations.GetCountByCity();
-            addressBookOperations.GetCountByState();
+            //addressBookOperations.GetCountByCity();
+            //addressBookOperations.GetCountByState();
+            addressBookOperations.ArrangeAlphabeticallyForAGivenCity();
         }
     }
 }

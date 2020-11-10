@@ -142,5 +142,17 @@ namespace AddressBookLinq
             foreach (var differentCitites in states)
                 Console.WriteLine(differentCitites.State.PadRight(20) + differentCitites.CountOfState);
         }
+        //arrange alphabetically for a given city
+        public void ArrangeAlphabeticallyForAGivenCity()
+        {
+            string city = "New York City";
+            var cities = addressBook.AsEnumerable().Where(x => x.Field<string>("City") == city).OrderBy(x => x.Field<string>("FirstName")).ThenBy(x => x.Field<string>("LastName"));
+            foreach(DataRow row in cities)
+            {
+                foreach(DataColumn column in addressBook.Columns)
+                    Console.Write(row[column].ToString().PadRight(20));
+                Console.WriteLine("\n");
+            }
+        }
     }
 }
