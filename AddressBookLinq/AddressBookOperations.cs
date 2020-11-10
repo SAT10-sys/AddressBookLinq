@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
+using System.Linq;
 
 namespace AddressBookLinq
 {
@@ -44,6 +45,33 @@ namespace AddressBookLinq
                 Console.WriteLine();
                 foreach(DataColumn column in addressBook.Columns)
                     Console.Write(row[column].ToString().PadRight(20));
+            }
+        }
+        //edit contact using first name
+        public void EditContactUsingFirstName()
+        {
+            string firstName = "Saul";
+            var contactToUpdate = addressBook.AsEnumerable().Where(x => x.Field<string>("FirstName").Equals(firstName)).FirstOrDefault();
+            if(contactToUpdate!=null)
+            {
+                contactToUpdate.SetField("Address", "Rosas");
+                contactToUpdate.SetField("EmailID", "shg21@yahoo.com");
+                Console.WriteLine("\n Address and EmailID of {0} edited successfully",firstName);
+                Display();
+            }
+            else
+                Console.WriteLine("Invalid entry");
+        }
+        //edit contact using last name
+        public void EditContactUsingLastName()
+        {
+            string lastName = "White";
+            var contactToUpdate = addressBook.AsEnumerable().Where(x => x.Field<string>("LastName").Equals(lastName)).FirstOrDefault();
+            if(contactToUpdate!=null)
+            {
+                contactToUpdate.SetField("PhoneNumber", "8017642387");
+                Console.WriteLine("\n Phone Number of {0} edited successfully",lastName);
+                Display();
             }
         }
     }

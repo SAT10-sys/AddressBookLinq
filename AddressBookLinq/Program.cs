@@ -10,7 +10,9 @@ namespace AddressBookLinq
             AddressBookOperations addressBookOperations = new AddressBookOperations();
             addressBookOperations.AddColumns();
             addressBookOperations.InsertContacts();
-            addressBookOperations.Display(); 
+            //addressBookOperations.Display(); 
+            addressBookOperations.EditContactUsingFirstName();
+            addressBookOperations.EditContactUsingLastName();
         }
     }
 }
